@@ -141,11 +141,11 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
     * Security is configured to secure the /products/** endpoints while allowing open access to others, including Swagger UI.
 
 * Dependencies:
-    Kotlin
-    Spring Boot 3.x
-    Spring Data JPA
-    Spring Security
-    H2 Database
-    Swagger/OpenAPI (springdoc-openapi)
-    SLF4J and Logback for logging
-    JUnit 5 and Mockito for testing
+    * Kotlin
+    * Spring Boot 3.x
+    * Spring Data JPA
+    * Spring Security
+    * H2 Database
+    * Swagger/OpenAPI (springdoc-openapi)
+    * SLF4J and Logback for logging
+    * JUnit 5 and Mockito for testing
