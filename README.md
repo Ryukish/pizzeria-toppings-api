@@ -30,15 +30,15 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
 - **Gradle** (Optional if using the Gradle wrapper provided)
 - **An IDE** like IntelliJ IDEA (Optional but is it really...)
 ## **Accessing Swagger UI:**
-    ```bash
+```bash
     http://localhost:8080/swagger-ui.html
-    ```
+```
 ## **Setup and Running the Application**
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/pizzeria-toppings-api.git
+   git clone https://github.com/Ryukish/pizzeria-toppings-api.git
    cd pizzeria-toppings-api
     ```
 2. **Build the project:**
@@ -61,10 +61,11 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
     * Request Body:
 
     ```json
-    {
-    "email": "customer@example.com",
-    "toppings": ["Pepperoni", "Mushrooms"]
-    }```
+        {
+            "email": "customer@example.com",
+            "toppings": ["Pepperoni", "Mushrooms"]
+        }
+    ```
     * Response: 200 OK with message "Toppings submitted successfully."
 2. **Get Toppings**
     * Endpoint: GET /toppings
@@ -81,7 +82,8 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
             "topping": "Mushrooms",
             "customerCount": 8
         }
-    ]```
+    ]
+    ```
 3. **Personal Topping Choice**
     * Endpoint: GET /toppings/my-choice
     * Description: Returns personal favorite toppings.
@@ -96,8 +98,8 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
     * Request Body:
     ```json
         {
-        "email": "customer@example.com",
-        "suggestedProducts": ["Calzone", "Garlic Bread"]
+            "email": "customer@example.com",
+            "suggestedProducts": ["Calzone", "Garlic Bread"]
         }
     ```
     * Response: 200 OK with message "Product suggestions submitted successfully."
@@ -114,9 +116,11 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
     * When accessing secured endpoints via Swagger UI, click on the Authorize button and enter the credentials.
 ## **Testing**
     * Basic unit tests
+
     ```bash
         ./gradlew test
     ```
+    
     Test reports are generated in the `build/reports/tests/test/index.html` file
 ## Additional Notes
 * Data Persistence:
