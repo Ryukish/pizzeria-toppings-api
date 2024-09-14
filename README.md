@@ -117,10 +117,10 @@ This is a backend application built with Kotlin and Spring Boot that allows cust
 ## **Testing**
     * Basic unit tests
 
-    ```bash
-        ./gradlew test
-    ```
-    
+```bash
+    ./gradlew test
+```
+
     Test reports are generated in the `build/reports/tests/test/index.html` file
 ## Additional Notes
 * Data Persistence:
