@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import jakarta.validation.Valid
 import io.swagger.v3.oas.annotations.Operation
-import io.swagger.v3.oas.annotations.parameters.RequestBody
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -31,7 +30,7 @@ class ToppingController(private val customerRepository: CustomerRepository) {
         logger.info("Fetching toppings and customer counts")
         customerRepository.findAll().forEach { customer ->
             customer.toppings.forEach { topping ->
-                toppingsMap.computeIfAbsent(topping) { _: String -> mutableSetOf<String>() }.add(customer.email)
+                toppingsMap.computeIfAbsent(topping) { mutableSetOf() }.add(customer.email)
             }
         }
 

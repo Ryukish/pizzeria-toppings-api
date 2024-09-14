@@ -10,9 +10,10 @@ import jakarta.validation.constraints.NotEmpty
 data class Customer(
     @Id
     @Email
+    @NotEmpty(message = "Email cannot be empty")
     val email: String,
 
     @ElementCollection
-    @NotEmpty
-    var toppings: MutableSet<@NotEmpty String> = mutableSetOf()
+    @NotEmpty(message = "Toppings list cannot be empty")    
+    var toppings: MutableSet<String> = mutableSetOf()
 )
